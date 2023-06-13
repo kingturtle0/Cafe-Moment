@@ -21,4 +21,4 @@ jobs:
     - name: Use the API key in JavaScript
       env:
         API_KEY: ${{ secrets.API_KEY }}
-      run: node apikey.js
+      run: node weather.js
