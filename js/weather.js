@@ -1,3 +1,9 @@
+const API_KEY = process.env.API_KEY;
+
+// API 키를 사용하여 원하는 작업 수행
+console.log(API_KEY);
+
+
 function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
