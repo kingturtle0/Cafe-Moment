@@ -1,3 +1,8 @@
+* {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
 .hidden {
   display: none;
 }
@@ -11,4 +16,19 @@ img {
   left: 0;
   bottom: 0;
   z-index: -1;
+  opacity: 0.95;
+}
+
+/* .screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#clock {
+  font-size: 150px;
+}
+
+#greeting {
+  font-size: 80px;
 }

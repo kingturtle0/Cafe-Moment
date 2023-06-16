@@ -13,7 +13,7 @@ function onLoginSubmit(event) {
 }
 
 function paintGreeting(username) {
-  greeting.innerText = `Hello ${username}`; // h1에 innerText 넣어주기
+  greeting.innerText = `Hello, ${username}`; // h1에 innerText 넣어주기
   greeting.classList.remove(HIDDEN_CLASSNAME); // hidden 클래스 제거
 }
 
