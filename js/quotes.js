@@ -1,52 +1,56 @@
 const quotes = [
   {
-    quote: "There is no substitute for hard work",
-    author: "Thomas Edison",
-  },
-  {
-    quote: "To do nothing is sometimes a good remedy",
-    author: "Hippocrates",
-  },
-  {
-    quote: "If you are afraid and still go forward, you are brave",
-    author: "Napoleon Bonaparte",
+    quote:
+      '"Once you wake up and smell the coffee, it’s hard to go back to sleep."',
+    author: "Fran Drescher",
   },
   {
     quote:
-      "We may have all come on different ships, but we're in the same boat now",
-    author: "Martin Luther King, Jr.",
+      '"Television is not real life. In real life, people actually have to leave the coffee shop and go to jobs."',
+    author: "Charles J. Sykes",
   },
   {
-    quote: "Real knowledge is to know the extent of one's ignorance",
-    author: "Confucius",
+    quote: '"Coffee smells like freshly ground heaven."',
+    author: "Jessi Lane Adams",
   },
   {
-    quote: "The only good is knowledge and the only evil is ignorance",
-    author: "Socrates",
+    quote: '"I orchestrate my mornings to the tune of coffee."',
+    author: "Harry Mahtar",
   },
   {
-    quote: "Patience is bitter but it’s fruit is sweet",
+    quote:
+      '"As long as there was coffee in the world, how bad could things be?"',
+    author: "Cassandra Clare, City of Ashes",
+  },
+  {
+    quote: '"I’d rather take coffee than compliments just now."',
+    author: "Louisa May Alcott, Little Women",
+  },
+  {
+    quote:
+      '"Ah coffee. The sweet balm by which we shall accomplish today’s tasks."',
+    author: "Holly Black, Ironside",
+  },
+  {
+    quote: '"Coffee, the favorite drink of the civilized world."',
+    author: "Thomas Jefferson",
+  },
+  {
+    quote:
+      '"No matter what historians claimed, BC really stood for ‘Before Coffee.’"',
+    author: "Cherise Sinclair, Master of the Mountain",
+  },
+  {
+    quote:
+      '"To do good work one must eat well, be well housed, have one’s fling from time to time, smoke one’s pipe, and drink one’s coffee in peace."',
     author: "Vincent Van Gogh",
-  },
-  {
-    quote: "There is always something for which to be thankful",
-    author: "Charles Dickens",
-  },
-  {
-    quote: "Only a life lived for others is a life worth while",
-    author: "Albert Einstein",
-  },
-  {
-    quote:
-      "When we are born, we cry, that we are come To this great stage of fools",
-    author: "William Shakespeare",
   },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote div:first-child");
+const author = document.querySelector("#quote div:last-child");
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
-author.innerText = "- " + todaysQuote.author;
+author.innerText = todaysQuote.author;

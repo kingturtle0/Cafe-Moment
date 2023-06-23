@@ -17,17 +17,34 @@ function deleteToDo(event) {
   saveToDos();
 }
 
+function completeToDo(event) {
+  const span = event.target;
+  span.classList.toggle("done");
+  toDos = toDos.map((todo) => {
+    if (todo.id === parseInt(span.parentElement.id, 10)) {
+      todo.completed = !todo.completed;
+    }
+    return todo;
+  });
+  saveToDos();
+}
+
 function paintToDo(newTodo) {
   const li = document.createElement("li");
   li.id = newTodo.id;
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
+  button.classList.add("todo-delete");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
+  if (newTodo.completed) {
+    span.classList.add("done");
+  }
+  span.addEventListener("click", completeToDo);
 }
 
 function handleToDoSubmit(event) {
@@ -37,7 +54,12 @@ function handleToDoSubmit(event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
+    completed: false,
   };
+  if (toDos.length > 4) {
+    alert("Can't add todo more😥 Please Delete completed.");
+    return;
+  }
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
   saveToDos();
